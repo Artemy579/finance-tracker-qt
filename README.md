@@ -1,2 +1,22 @@
-# finance-tracker-qt
-A personal finance desktop application built with C++17, Qt 6, and SQLite. It supports income and expense tracking, custom categories, date filtering, balance calculation, statistics, charts, transaction search, CSV export, and database backups.
+# Finance Tracker
+
+Настольное приложение для учёта личных финансов на C++17, Qt 6 Widgets и SQLite.
+
+
+- добавление доходов и расходов;
+- категории, описание и дата операции;
+- фильтр по месяцу;
+- итоговые суммы доходов, расходов и баланса;
+- диаграмма расходов по категориям;
+- удаление операций;
+- экспорт данных в CSV;
+- автоматическое хранение базы в каталоге данных приложения.
+
+Диаграмма реализована собственным виджетом через `QPainter`, поэтому отдельный модуль Qt Charts не требуется.
+
+## Сборка
+
+```bash
+cmake -S . -B build -DCMAKE_PREFIX_PATH=/path/to/Qt/6.x/compiler
+cmake --build build --config Release
+```
